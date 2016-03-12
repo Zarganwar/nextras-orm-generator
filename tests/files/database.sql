@@ -1,0 +1,1 @@
+CREATE DATABASE generator_test;

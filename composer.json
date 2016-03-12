@@ -1,0 +1,19 @@
+{
+  "require": {
+    "nette/php-generator": "2.3.*",
+    "nette/robot-loader": "2.3.*",
+    "greenlion/php-sql-parser": "4.0.*",
+    "nette/utils": "2.3.*"
+  },
+  "require-dev": {
+    "nette/tester": "1.7.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Zarganwar\\PerformancePanel\\": "src/"
+    },
+    "classmap": [
+      "src/Generator.php"
+    ]
+  }
+}

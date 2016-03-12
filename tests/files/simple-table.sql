@@ -1,0 +1,6 @@
+CREATE TABLE author (
+	id int NOT NULL AUTO_INCREMENT,
+	name varchar(30) NOT NULL,
+	born date DEFAULT NULL,
+	PRIMARY KEY(id)
+) AUTO_INCREMENT=13;
