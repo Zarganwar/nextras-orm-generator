@@ -1,5 +1,5 @@
 {
-  "name": "nextras-orm-generator",
+  "name": "zarganwar/nextras-orm-generator",
   "type": "library",
   "description": "Nextras ORM class generator",
   "keywords": ["nextras", "orm", "sql", "class", "generator"],
