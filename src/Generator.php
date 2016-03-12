@@ -9,6 +9,7 @@
 namespace Zarganwar\NextrasOrmUtils;
 
 use Nette\PhpGenerator\ClassType;
+use Nette\PhpGenerator\PhpNamespace;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use PHPSQLParser\PHPSQLParser;
@@ -25,7 +26,7 @@ class Generator
     private $target;
 
     /**
-     * @var string
+     * @var PhpNamespace
      */
     private $namespace;
 
@@ -43,7 +44,7 @@ class Generator
     public function __construct($target, $namespace = null)
     {
         $this->target = $target;
-        $this->namespace = $namespace;
+        $this->namespace = new PhpNamespace($namespace);
     }
 
     /**
