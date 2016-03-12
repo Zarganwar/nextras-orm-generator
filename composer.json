@@ -1,4 +1,15 @@
 {
+  "name": "nextras-orm-generator",
+  "type": "library",
+  "description": "Nextras ORM class generator",
+  "keywords": ["nextras", "orm", "sql", "class", "generator"],
+  "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+  "authors": [
+    {
+      "name": "Martin Jirásek",
+      "email": "jertin@seznam.cz"
+    }
+  ],
   "require": {
     "nette/php-generator": "2.3.*",
     "nette/robot-loader": "2.3.*",
