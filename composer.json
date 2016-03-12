@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Zarganwar\\PerformancePanel\\": "src/"
+      "Zarganwar\\NextrasOrmUtils\\": "src/"
     },
     "classmap": [
       "src/Generator.php"
