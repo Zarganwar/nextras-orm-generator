@@ -95,7 +95,7 @@ class Generator
                 $table = $block['TABLE']['name'];
                 $type = $this->getCamelCase($table) . "Repository";
                 $property = '$' . $this->getCamelCase($table, true) . 's';
-                $class->addDocument("@property-read $type $property");
+                $class->addComment("@property-read $type $property");
             }
         }
         $this->createClass($class);
@@ -142,7 +142,7 @@ class Generator
             ->addMethod("getEntityClassNames")
             ->setStatic(true)
             ->setVisibility('public')
-            ->addDocument("@return array")
+            ->addComment("@return array")
             ->addBody("return [$className::class];")
         ;
         $this->createClass($class, $className);
