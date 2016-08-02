@@ -92,7 +92,7 @@ class Generator
 
         foreach ($this->parsedSql as $block) {
             if (isset($block['CREATE'], $block['TABLE'])) {
-                $table = $block['TABLE']['name'];
+                $table = $this->normalizeSqlName($block['TABLE']['name']);
                 $type = $this->getCamelCase($table) . "Repository";
                 $property = '$' . $this->getCamelCase($table, true) . 's';
                 $class->addComment("@property-read $type $property");
@@ -101,6 +101,14 @@ class Generator
         $this->createClass($class);
     }
 
+    /**
+     * @param $name
+     * @return string
+     */
+    protected function normalizeSqlName($name)
+    {
+        return Strings::replace($name, '~`~', '');
+    }
 
     /**
      * @param string $tableName
@@ -188,7 +196,7 @@ class Generator
     {
         foreach ($this->parsedSql as $block) {
             if (isset($block['CREATE'], $block['TABLE'])) {
-                $className = $this->getCamelCase($block['TABLE']['name']);
+                $className = $this->getCamelCase($this->normalizeSqlName($block['TABLE']['name']));
                 $this->createLayerDir($className);
                 $this->createEntity($className);
                 $this->createMapper($className);
