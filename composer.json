@@ -11,10 +11,10 @@
     }
   ],
   "require": {
-    "nette/php-generator": "2.3.*",
-    "nette/robot-loader": "2.3.*",
-    "greenlion/php-sql-parser": "4.0.*",
-    "nette/utils": "2.3.*"
+    "nette/php-generator": "2.4.*",
+    "nette/robot-loader": "2.4.*",
+    "greenlion/php-sql-parser": "4.1.*",
+    "nette/utils": "2.4.*"
   },
   "require-dev": {
     "nette/tester": "1.7.*"
